@@ -1,0 +1,23 @@
+
+name: signseg_env
+
+dependencies:
+  - pip
+  - python=3.7
+  - matplotlib==3.1.3
+  - seaborn==0.10.0
+  - bokeh==2.0.1
+  - numpy==1.18.1
+  - tqdm==4.50.2
+  - scipy==1.4.1
+  - Pillow==7.1.2
+  - tensorboard=2.2.1
+  - pip:
+    - zsvision==0.5.3
+    - pympi_ling==1.69
+    - torch==1.4.0
+    - opencv_python==4.2.0.34
+    - beartype==0.5.1
+    - ruptures==1.0.6
+    - hickle==3.4.7
+    - webvtt_py==0.4.6
