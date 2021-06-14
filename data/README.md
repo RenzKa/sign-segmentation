@@ -1,6 +1,6 @@
 # Sign segmentation data documentation
 
-Data and models COMING SOON.
+Data and models can be downloaded [here](https://drive.google.com/drive/folders/17DaatdfD4GRnLJJ0RX5TcSfHGMxMS0Lm?usp=sharing).
 
 * `features.mat` contains 1024 dimensional I3D features.
 

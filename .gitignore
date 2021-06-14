@@ -3,7 +3,6 @@
 *.jpg
 *.pkl
 *.model
-download/
 run/
 __pycache__/
 *.py[cod]

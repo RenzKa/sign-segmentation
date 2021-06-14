@@ -34,8 +34,7 @@ conda activate signseg_env
 ```
 
 ## Data and models
-COMING SOON!
-You can download our pretrained models (`models.zip [302MB]`) and data (`data.zip [5.5GB]`) used in the experiments by executing `download/download_*.sh`. The unzipped `data/` and `models/` folders should be located on the root directory of the repository (for using the demo downloading the `models` folder is sufficient).
+You can download our pretrained models (`models.zip [302MB]`) and data (`data.zip [5.5GB]`) used in the experiments [here](https://drive.google.com/drive/folders/17DaatdfD4GRnLJJ0RX5TcSfHGMxMS0Lm?usp=sharing) or by executing `download/download_*.sh`. The unzipped `data/` and `models/` folders should be located on the root directory of the repository (for using the demo downloading the `models` folder is sufficient).
 
 
 ### Data:
@@ -98,16 +97,17 @@ During the training a `.log` file for tensorboard is generated. In addition the 
 
 |ID | Model | mF1B | mF1S | Links (for seed=0) |
 |   -   |   -  |   -  |   -   |  -   | 
-| 1 | BSL Corpus | 68.68<sub>±0.6</sub> |47.71<sub>±0.8</sub> | COMING SOON |
-| 2 | BSL1K -> BSL Corpus | 66.17<sub>±0.5</sub> |44.44<sub>±1.0</sub> | COMING SOON |
+| 1 | BSL Corpus | 68.68<sub>±0.6</sub> |47.71<sub>±0.8</sub> | [run](https://drive.google.com/file/d/1na-b_WoPPajPN9WCd8kdQ0WrMKr-EBzH/view?usp=sharing), [args](https://drive.google.com/file/d/1FHC0mHt3meXBobnuPWN17vwlPaekF-qU/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1ot6VNYfzn9UlVdRt31mQ8Mfics1DxP7T/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1y-LeaNuZSAeLTc1yKXA0XUWnwINr8pVo?usp=sharing) |
+| 2 | BSL1K -> BSL Corpus | 66.17<sub>±0.5</sub> |44.44<sub>±1.0</sub> | [run](https://drive.google.com/file/d/1hvRN7a3GX7YQF9jTxfmsJbS_WXebsb9Y/view?usp=sharing), [args](https://drive.google.com/file/d/1Gg_qZYYUtl3YtNQec2ku-VxBiM9r-0mR/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1ETNO6tLgmg_o-T7L0qG4eMEd8QhsZpOG/view?usp=sharing), [logs](https://drive.google.com/drive/folders/11WnAEmYY3PIC03XdBNZB0lU4BkZmVqKp?usp=sharing) |
 
 
 * Fully-supervised segmentation results on PHOENIX14
 
 |ID | I3D training data | MS-TCN training data | mF1B | mF1S | Links (for seed=0) |
 | - |   -   |   -  |   -  |   -   |   -   | 
-|3| BSL Corpus | PHOENIX14 | 65.06<sub>±0.5</sub> |44.42<sub>±2.0</sub> | COMING SOON |
-|4| PHOENIX14 | PHOENIX14 | 71.50<sub>±0.2</sub> |52.78<sub>±1.6</sub> | COMING SOON |
+|3| BSL Corpus | PHOENIX14 | 65.06<sub>±0.5</sub> |44.42<sub>±2.0</sub> | [run](https://drive.google.com/file/d/1Vihh4MG0iWOLQalI5SqVYjQn3aELsLRP/view?usp=sharing), [args](https://drive.google.com/file/d/1PLN7wcsJBqnhIBWkdfgPvyujh3MIzea4/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1hynccDWvwKaH8uiMRAVYiWsqeK9dptm5/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1Rfklvh3-pdCe_meKOcw9rjLCR_R5j-ap?usp=sharing) |
+|4| PHOENIX14 | PHOENIX14 | 71.50<sub>±0.2</sub> |52.78<sub>±1.6</sub> | [run](https://drive.google.com/file/d/1jAfJPs58ErT-UTnN3mPstOhekAgTCLEY/view?usp=sharing), [args](https://drive.google.com/file/d/1ak6VOuLvv6hrDEUsJbI1WcGoJGfVpUi5/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1q0bShF9IpuuSHrJyZIPNMUsC5guQ0B8m/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1wk5dly6jxKEivO3q5BEahTtLSsrPK1of?usp=sharing) |
+
 
 
 ### Train CVPRW
@@ -121,12 +121,12 @@ During the training a `.log` file for tensorboard is generated. In addition the 
 
 |ID| Method | Adaptation protocol | mF1B | mF1S | Links (for seed=0) |
 |-|   -   |   -  |   -  |   -   |   -   | 
-|5| Pseudo-labels | inductive | 47.94<sub>±1.0</sub> | 32.45<sub>±0.3</sub> | COMING SOON |
-|6| Changepoints | inductive | 48.51<sub>±0.4</sub> | 34.45<sub>±1.4</sub> | COMING SOON |
-|7| CMPL | inductive | 53.57<sub>±0.7</sub> | 33.82<sub>±0.0</sub> | COMING SOON |
-|8| Pseudo-labels | transductive | 47.62<sub>±0.4</sub> | 32.11<sub>±0.9</sub> |COMING SOON |
-|9| Changepoints | transductive | 48.29<sub>±0.1</sub> | 35.31<sub>±1.4</sub> | COMING SOON |
-|10| CMPL | transductive | 53.53<sub>±0.1</sub> | 32.93<sub>±0.9</sub> | COMING SOON |
+|5| Pseudo-labels | inductive | 47.94<sub>±1.0</sub> | 32.45<sub>±0.3</sub> | [run](https://drive.google.com/file/d/1qgvJsKzgA-eutZVAba_jt2TucXYLTnDM/view?usp=sharing), [args](https://drive.google.com/file/d/1dcC-heRxyGnnAVgKFvprkhRbrPCkqPMn/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1pqDmCo_GBvWx0OO2mRbQdoy_9lG-TDEo/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1xSYTd7mCqmmk6pCGrHAncS5RoxJjwQ0-?usp=sharing) |
+|6| Changepoints | inductive | 48.51<sub>±0.4</sub> | 34.45<sub>±1.4</sub> | [run](https://drive.google.com/file/d/117HicDNam1sMFI7uV4dzOW-J8RoMZL63/view?usp=sharing), [args](https://drive.google.com/file/d/1skuhL7tP9BhuaZ6Vh9u_BO3AJAmmQmkD/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1LP5alfee4DfGZVz4bkWO7v2GoJ7OP4cD/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1jC5w7Dg5LKse4T4OtTCYM_0w7JCW5OnF?usp=sharing) |
+|7| CMPL | inductive | 53.57<sub>±0.7</sub> | 33.82<sub>±0.0</sub> | [run](https://drive.google.com/file/d/1lbhiQNqYpPWbxRmrxtRt-R-CzEbw21Ng/view?usp=sharing), [args](https://drive.google.com/file/d/16iQj5e0X8za0pMPZnFzst7el1jSUqDtk/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/13SM0Lh4_89am9RJvwc-3uDLbV_DwA-W0/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1B4j4H2arehZjDNL2bjnM2I7LtAHHmm43?usp=sharing) |
+|8| Pseudo-labels | transductive | 47.62<sub>±0.4</sub> | 32.11<sub>±0.9</sub> | [run](https://drive.google.com/file/d/1HrWZ0LM_OR9bQL7ZKRVM_LAzb13d1QWX/view?usp=sharing), [args](https://drive.google.com/file/d/1KzuA_iqMtJ94Vlm6jRpslwxVgNmVSuvX/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1TU1gf1AA1eGi5PBcBqvA_04Fynxu4xbx/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1NdBzs9l4KIZ05g0-sKi2ftwvtZlhTl9a?usp=sharing) |
+|9| Changepoints | transductive | 48.29<sub>±0.1</sub> | 35.31<sub>±1.4</sub> | [run](https://drive.google.com/file/d/1fuqwrGyCjamUCY7DU2MMWnMPGeFVE6KU/view?usp=sharing), [args](https://drive.google.com/file/d/1h_YrYK9Q7F8shbMMkeaWbk1VrgJYmXXT/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/1N3qQlrvVOp79pAJ9uIo_fVTYMN_YXLL7/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1e83LQ7ZbWdj6t9OYNsn7RRHiljm0zJF_?usp=sharing) |
+|10| CMPL | transductive | 53.53<sub>±0.1</sub> | 32.93<sub>±0.9</sub> | [run](https://drive.google.com/file/d/1_Ql5aia7Jo2xszeXZk7tbLP00z7bqrht/view?usp=sharing), [args](https://drive.google.com/file/d/1T3I2V53aPmdHHFZH4PDbo9pPCz8JIg1p/view?usp=sharing), [I3D model](https://drive.google.com/file/d/1pbldZLqFSS2E0hoh1f4hiTvB9jL3QGOB/view?usp=sharing), [MS-TCN model](https://drive.google.com/file/d/10tGdIcJCrJ9n40apjWXTN6KcQy0SUsNx/view?usp=sharing), [logs](https://drive.google.com/drive/folders/1xz_BSamWmxyBseXl50-2vh-2cUfTUkMy?usp=sharing) |
 
 ## Citation
 If you use this code and data, please cite the following:
@@ -153,4 +153,4 @@ The license in this repository only covers the code. For data.zip and models.zip
 
 
 ## Acknowledgements
-The code builds on the [github.com/yabufarha/ms-tcn](https://github.com/yabufarha/ms-tcn) repository. The demo reuses parts from [github.com/gulvarol/bsl1k](https://github.com/gulvarol/bsl1k).
+The code builds on the [github.com/yabufarha/ms-tcn](https://github.com/yabufarha/ms-tcn) repository. The demo reuses parts from [github.com/gulvarol/bsl1k](https://github.com/gulvarol/bsl1k).  We like to thank C. Camgoz for the help with the BSLCORPUS data preparation.
