@@ -16,6 +16,7 @@ import torch
 import scipy.special
 import matplotlib.pyplot as plt
 from beartype import beartype
+from scipy.io import loadmat
 from zsvision.zs_utils import BlockTimer
 from tqdm import tqdm
 import models
@@ -266,7 +267,12 @@ def main_mstcn(
     viz: bool,
     generate_vtt: bool,
 ):
+    if (save_segments or generate_vtt) and not save_path.exists():
+        print(f"Creating dir at {save_path}")
+        save_path.mkdir(exist_ok=True, parents=True)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Device: {device}")
 
     with BlockTimer("Loading MS-TCN model"):
         model = load_mstcn_model(
@@ -282,6 +288,8 @@ def main_mstcn(
     # Group the clips into batches
     num_batches = math.ceil(num_clips)
 
+    print(f"num_clips: {num_clips}, num_batches: {num_batches}, num_frames: {features.shape[0]}")
+
     all_preds = []
     all_probs = []
 
@@ -289,7 +297,6 @@ def main_mstcn(
         inp = features[b * 100 : (b + 1) * 100]
         inp = np.swapaxes(inp, 0, 1)
         inp = inp.unsqueeze(0).to(device)
-    
         predictions = model(inp, torch.ones(inp.size(), device=device))
         pred_prob = list(sm(predictions[-1]).cpu().detach().numpy())[0][1]
         predicted = torch.tensor(np.where(np.asarray(pred_prob) > 0.5, 1, 0))
@@ -422,6 +429,7 @@ if __name__ == "__main__":
         features, logits = main_i3d(**vars(p.parse_args()))
     else:
         features = loadmat(args.feature_path)['preds']
+        features = torch.from_numpy(features).float()
         logits = None
 
     main_mstcn(features, logits, **vars(p.parse_args()))

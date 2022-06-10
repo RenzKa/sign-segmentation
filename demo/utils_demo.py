@@ -168,11 +168,12 @@ def generate_vtt_file(all_preds, logits, save_path):
         diff = starts[ix+1]-ends[ix]
         starts[ix+1] -= floor(diff/2)
         ends[ix] += floor(diff/2)
-
-    # load i3d classes
-    i3d_scores = logits
-    with open('data/info/bslcp/info.pkl', 'rb') as f:
-        info_data = pickle.load(f)
+    
+    if logits is not None:
+        # load i3d classes
+        i3d_scores = logits
+        with open('data/info/bslcp/info.pkl', 'rb') as f:
+            info_data = pickle.load(f)
 
     # for start, end in zip(starts, ends):
     for start, end in zip(starts, ends):
